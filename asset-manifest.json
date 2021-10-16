@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/fake_store_test/static/css/main.a617e044.chunk.css",
-    "main.js": "/fake_store_test/static/js/main.c3ab9f8a.chunk.js",
-    "main.js.map": "/fake_store_test/static/js/main.c3ab9f8a.chunk.js.map",
-    "runtime-main.js": "/fake_store_test/static/js/runtime-main.d7ef2fd4.js",
-    "runtime-main.js.map": "/fake_store_test/static/js/runtime-main.d7ef2fd4.js.map",
-    "static/js/2.f8ce46aa.chunk.js": "/fake_store_test/static/js/2.f8ce46aa.chunk.js",
-    "static/js/2.f8ce46aa.chunk.js.map": "/fake_store_test/static/js/2.f8ce46aa.chunk.js.map",
-    "static/js/3.2a41f9d4.chunk.js": "/fake_store_test/static/js/3.2a41f9d4.chunk.js",
-    "static/js/3.2a41f9d4.chunk.js.map": "/fake_store_test/static/js/3.2a41f9d4.chunk.js.map",
+    "main.css": "/fake_store_test/static/css/main.d82fb24e.chunk.css",
+    "main.js": "/fake_store_test/static/js/main.257a2f03.chunk.js",
+    "main.js.map": "/fake_store_test/static/js/main.257a2f03.chunk.js.map",
+    "runtime-main.js": "/fake_store_test/static/js/runtime-main.71b9d407.js",
+    "runtime-main.js.map": "/fake_store_test/static/js/runtime-main.71b9d407.js.map",
+    "static/js/2.645efb67.chunk.js": "/fake_store_test/static/js/2.645efb67.chunk.js",
+    "static/js/2.645efb67.chunk.js.map": "/fake_store_test/static/js/2.645efb67.chunk.js.map",
+    "static/js/3.d8d83af4.chunk.js": "/fake_store_test/static/js/3.d8d83af4.chunk.js",
+    "static/js/3.d8d83af4.chunk.js.map": "/fake_store_test/static/js/3.d8d83af4.chunk.js.map",
     "index.html": "/fake_store_test/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/fake_store_test/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.f8ce46aa.chunk.js.LICENSE.txt": "/fake_store_test/static/js/2.f8ce46aa.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/fake_store_test/static/media/logo.6ce24c58.svg"
+    "static/css/main.d82fb24e.chunk.css.map": "/fake_store_test/static/css/main.d82fb24e.chunk.css.map",
+    "static/js/2.645efb67.chunk.js.LICENSE.txt": "/fake_store_test/static/js/2.645efb67.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d7ef2fd4.js",
-    "static/js/2.f8ce46aa.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.c3ab9f8a.chunk.js"
+    "static/js/runtime-main.71b9d407.js",
+    "static/js/2.645efb67.chunk.js",
+    "static/css/main.d82fb24e.chunk.css",
+    "static/js/main.257a2f03.chunk.js"
   ]
 }
