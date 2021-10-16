@@ -1,0 +1,6 @@
+.productlist_title { text-align: center; }
+.productlist_loader_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}

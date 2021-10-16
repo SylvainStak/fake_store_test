@@ -1,0 +1,18 @@
+.categories_container > div { margin: 5px; }
+.categories_title { text-align: center; }
+
+.categories_container, .categories_loader_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media (max-width: 800px) {
+    .categories_container {
+      flex-direction: column;
+    }
+
+    .categories_container > div {
+        width: 100%;
+    }
+}

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { AppContext } from './AppContext';
 import './App.css';
-import Button from '@mui/material/Button';
+import Home from './components/Home';
+import Error404 from './components/Error404';
 
 function App() {
+  const appUri = '/fake_store_test';
+  const queryClient = new QueryClient()
+  const [selectedCategory, setSelectedCategory] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Button
-          variant="contained"
-          href="https://reactjs.org"
-        >
-          Learn React
-        </Button>
-      </header>
-    </div>
+    <>
+      <QueryClientProvider client={queryClient}>
+        <AppContext.Provider value={{ selectedCategory, setSelectedCategory }}>
+          <Router>
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path={appUri} exact component={Home} />
+                <Route path={`${appUri}/product/:productId`} exact component={Home} />
+                {/* 404 REDIRECT */}
+                <Route component={Error404} />
+              </Switch>
+          </Router>
+        </AppContext.Provider>
+      </QueryClientProvider>
+    </>
   );
 }
 
