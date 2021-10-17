@@ -12,10 +12,10 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import axios from 'axios';
-import './Categories.css';
+import '../styles/Categories.css';
 
 function Categories() {
-  const { setSelectedCategory } = useContext(AppContext);
+  const { setSelectedCategory, setPagination } = useContext(AppContext);
   const fetchCategories = () => axios('https://fakestoreapi.com/products/categories');
   const { isLoading, error, data } = useQuery('categories', fetchCategories, {staleTime: 100000, cacheTime: 100000});
 
@@ -27,7 +27,10 @@ function Categories() {
           label={capitalizeName(category)}
           variant="outlined"
           color="info"
-          onClick={() => setSelectedCategory(category)}
+          onClick={() => {
+            setSelectedCategory(category);
+            setPagination(1);
+          }}
         />
       </Stack>
     </div>
@@ -64,7 +67,10 @@ function Categories() {
                 label={capitalizeName('All Products')}
                 variant="outlined"
                 color="info"
-                onClick={() => setSelectedCategory('')}
+                onClick={() => {
+                  setSelectedCategory('');
+                  setPagination(1);
+                }}
               />
             </div>
             {renderCategories()}

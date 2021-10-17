@@ -4,3 +4,9 @@
     justify-content: center;
     flex-direction: row;
 }
+
+.productlist_pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
