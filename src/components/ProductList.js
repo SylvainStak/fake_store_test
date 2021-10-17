@@ -15,7 +15,7 @@ function ProductList() {
   const fetchProducts = () => axios('https://fakestoreapi.com/products');
   const { isLoading, error, data } = useQuery('products', fetchProducts, {staleTime: 100000, cacheTime: 100000});
   const handlePagination = (event, value) => setPagination(value);
-  const categoryFilter = product => selectedCategory?product.category==selectedCategory:true;
+  const categoryFilter = product => selectedCategory?product.category===selectedCategory:true;
   const resultsPerPage = 4;
   const totalPages = () => Math.ceil(data.data.filter(categoryFilter).length/resultsPerPage)
   
