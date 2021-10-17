@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { AppContext } from './AppContext';
 import Home from './components/Home';
 import Error404 from './components/Error404';
+import ProductInfo from './components/ProductInfo';
 
 function App() {
   const appUri = '/fake_store_test';
@@ -19,13 +20,14 @@ function App() {
             selectedCategory,
             setSelectedCategory,
             pagination,
-            setPagination }}
+            setPagination
+          }}
         >
           <Router>
               <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path={appUri} exact component={Home} />
-                <Route path={`${appUri}/product/:productId`} exact component={Home} />
+                <Route path={`${appUri}/product/:productId`} exact component={ProductInfo} />
                 {/* 404 REDIRECT */}
                 <Route component={Error404} />
               </Switch>

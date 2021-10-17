@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import '../styles/ProductList.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import CircularProgress from '@mui/material/CircularProgress';
-import Paper from '@mui/material/Paper';
 import axios from 'axios';
 import Container from '@mui/material/Container';
 import { useQuery } from 'react-query';
 import { AppContext } from '../AppContext';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import ProductShowcase from './ProductShowcase';
 
 function ProductList() {
   const { selectedCategory, pagination, setPagination } = useContext(AppContext);
@@ -17,11 +17,10 @@ function ProductList() {
   const handlePagination = (event, value) => setPagination(value);
   const categoryFilter = product => selectedCategory?product.category===selectedCategory:true;
   const resultsPerPage = 4;
-  const totalPages = () => Math.ceil(data.data.filter(categoryFilter).length/resultsPerPage)
-  
+  const totalPages = () => Math.ceil(data.data.filter(categoryFilter).length/resultsPerPage);
 
   const processedData = () => {
-    const rawProducts = data.data.filter(categoryFilter);
+    let rawProducts = data.data.filter(categoryFilter);
     const offset = (pagination-1)*resultsPerPage;
     const limit = offset+resultsPerPage;
     return rawProducts.slice(offset, limit);
@@ -29,11 +28,7 @@ function ProductList() {
 
   const renderProducts = () => processedData().map(product => (
     <div key={product.id}>
-      <Paper
-        elevation={3}
-      >
-        {product.title}
-      </Paper>
+      <ProductShowcase product={product} />
     </div>
   ));
 
@@ -47,7 +42,7 @@ function ProductList() {
             <CircularProgress />
           </div>
           ) : (
-          <Container maxWidth="sm">
+          <Container maxWidth="md">
             {renderProducts()}
             <div className="productlist_pagination">
               <Stack spacing={2}>

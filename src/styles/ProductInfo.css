@@ -1,0 +1,12 @@
+.backtolist_link {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product_info_container {
+    background-color: lightgrey;
+    border: 1px solid black;
+}
