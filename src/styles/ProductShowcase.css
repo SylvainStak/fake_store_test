@@ -1,6 +1,5 @@
 .product_showcase { margin-top: 2rem; }
 .product_showcase_link { text-decoration: none; }
-.product_image { margin-left: 1rem; }
 .product_showcase:hover { background-color: rgb(250, 250, 250); }
 .product_price { font-weight: bold; }
 
@@ -13,4 +12,9 @@
     .product_showcase_container {
         text-align: center;
     }
+}
+
+.product_image {
+    margin-left: 1rem;
+    background: transparent url('http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif') center no-repeat;
 }
